@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.nav1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.a{
+    text-decoration: none;
+    color: white;
+
+}
+.litech{
+    display: block;
+}
+#prime{
+    text-align: center;
+    padding: 5px;
+    background-color: coral;
+}
+.maincontain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.vestigeprime{
+    border: 2px solid red;
+    background-color: antiquewhite;
+}
+.subprime1{
+    text-align: center;
+    padding: 10px;
+}
+.subprime2{
+    text-align: center;
+    padding: 10px;
+}
+.carousel1{
+    text-align: center;
+    margin: 0px auto;
+}
+.carousel12{
+    margin: 0px auto;
+}

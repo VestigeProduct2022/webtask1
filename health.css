@@ -1,0 +1,120 @@
+
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.mainhead{
+    
+    padding: 10px;
+    
+}
+    
+.nav{
+    max-height: 80px;
+    background-color:darkseagreen ;
+    flex-direction: column;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.section12{
+    padding-top: 80px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed; */
+    
+}
+li{
+    display: block;
+    padding: 8px;
+}
+li a{
+    text-decoration: none;
+    padding: 10px;
+    color:black ;
+}
+#prime{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #80cbc47a;
+}
+.section1{
+    /* display: flex; */
+    
+    height: 100%;
+}
+.maincontain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 80%;
+}
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    
+}
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+}
+.vestigeprime{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 7px;
+    border: 4px solid aliceblue;
+    background-color: aliceblue;
+    border-radius: 22px;
+}
+.subprime1{
+    text-align: center;
+    padding: 5px;
+}
+.subprime2{
+    text-align: center;
+    padding: 5px;
+}
+.size1{
+    background-color: white;
+    width: 202px;
+    padding: 43px 0px;
+    margin: 0px 0px;
+}
+.size2{
+    background-color: white;
+    width: 202px;
+    
+}
+.size3{
+    background-color: white;
+    width: 202px;
+}
+.size4{
+    width: 202px;
+}
+.size5{
+    background-color: white;
+    width: 202px;
+    padding: 10px 0px;
+}

@@ -1,0 +1,30 @@
+﻿function showalert(strbit, strmess) {     
+    $('#msg').fadeIn();
+    $("body").css({ 'overflow': 'auto' });
+    if (strbit == '1') {
+        document.getElementById('msg').innerHTML = "<img src='images/success-icon2.png' /> " + strmess;
+    }
+    else {
+        document.getElementById('msg').innerHTML = "<img src='images/warning-img.png' /> " + strmess;
+    }
+    $('#msg').fadeOut(5000);
+    
+    $(".popupbox").css({ 'display': 'none' });
+    $("#fade").fadeOut(5000);
+}
+ function showCustomAlert(strbit,strmess) {
+    $('#msg1').fadeIn();
+    $("body").css({ 'overflow': 'auto' });
+    if (strbit == '1') {
+        document.getElementById('msg1').innerHTML = "<img src='images/success-icon2.png' /> " + strmess;
+    }
+    else {
+        document.getElementById('msg1').innerHTML = "<img src='images/success-icon2.png' />&nbsp;&nbsp;&nbsp; " + strmess + "<br /><a href='javascript:void(0)' class='lnksubmit' onclick='forfocus()'>Ok</a>";
+    }
+}
+function forfocus() {
+    $("#msg1").hide();
+    $(".loader").hide();
+    window.location.href="makeover.aspx";
+   // $("#ctl00_CPHPageSection_txtDistributorId").focus();
+}

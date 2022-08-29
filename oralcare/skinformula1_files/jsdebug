@@ -1,0 +1,319 @@
+var wsUtil=function() {
+wsUtil.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+wsUtil.prototype={
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return wsUtil._staticInstance.get_path();},
+HelloWorld:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'HelloWorld',false,{},succeededCallback,failedCallback,userContext); },
+SaveContactData:function(Name,Address,CountryName,PinCode,CityName,UserEmail,strQuery,strdisId,strIsDistributor,succeededCallback, failedCallback, userContext) {
+/// <param name="Name" type="String">System.String</param>
+/// <param name="Address" type="String">System.String</param>
+/// <param name="CountryName" type="String">System.String</param>
+/// <param name="PinCode" type="String">System.String</param>
+/// <param name="CityName" type="String">System.String</param>
+/// <param name="UserEmail" type="String">System.String</param>
+/// <param name="strQuery" type="String">System.String</param>
+/// <param name="strdisId" type="String">System.String</param>
+/// <param name="strIsDistributor" type="Boolean">System.Boolean</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveContactData',false,{Name:Name,Address:Address,CountryName:CountryName,PinCode:PinCode,CityName:CityName,UserEmail:UserEmail,strQuery:strQuery,strdisId:strdisId,strIsDistributor:strIsDistributor},succeededCallback,failedCallback,userContext); },
+SaveCustomerContactUs:function(Name,UserEmail,PhoneNo,isdistributor,distributorid,succeededCallback, failedCallback, userContext) {
+/// <param name="Name" type="String">System.String</param>
+/// <param name="UserEmail" type="String">System.String</param>
+/// <param name="PhoneNo" type="String">System.String</param>
+/// <param name="isdistributor" type="Boolean">System.Boolean</param>
+/// <param name="distributorid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveCustomerContactUs',false,{Name:Name,UserEmail:UserEmail,PhoneNo:PhoneNo,isdistributor:isdistributor,distributorid:distributorid},succeededCallback,failedCallback,userContext); },
+wsGetOrders:function(DistributorId,disid,CurrentPageIndex,succeededCallback, failedCallback, userContext) {
+/// <param name="DistributorId" type="String">System.String</param>
+/// <param name="disid" type="String">System.String</param>
+/// <param name="CurrentPageIndex" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetOrders',false,{DistributorId:DistributorId,disid:disid,CurrentPageIndex:CurrentPageIndex},succeededCallback,failedCallback,userContext); },
+wsGetOrdersSummary:function(orderid,succeededCallback, failedCallback, userContext) {
+/// <param name="orderid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetOrdersSummary',false,{orderid:orderid},succeededCallback,failedCallback,userContext); },
+CreateNewSF9Order:function(Customer_Id,ProductIds_Qtys,Comments,succeededCallback, failedCallback, userContext) {
+/// <param name="Customer_Id" type="Number">System.Int32</param>
+/// <param name="ProductIds_Qtys" type="String">System.String</param>
+/// <param name="Comments" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'CreateNewSF9Order',false,{Customer_Id:Customer_Id,ProductIds_Qtys:ProductIds_Qtys,Comments:Comments},succeededCallback,failedCallback,userContext); },
+saveAnalysisResult:function(Customer_Id,ProductIds_Qtys,succeededCallback, failedCallback, userContext) {
+/// <param name="Customer_Id" type="Number">System.Int32</param>
+/// <param name="ProductIds_Qtys" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'saveAnalysisResult',false,{Customer_Id:Customer_Id,ProductIds_Qtys:ProductIds_Qtys},succeededCallback,failedCallback,userContext); },
+UpdateProfileDetails:function(CUSID,Name,Occupation,PhoneNo,UserEmail,DOB,DOA,SF9CustomersSkinConcerns,SkinBestDescriptionId,SkinCareRoutine,SkinBrandsUsing,BestLikeAboutProducts,SF9CustomersInterests,SF9CustomersSuggestedFriends,succeededCallback, failedCallback, userContext) {
+/// <param name="CUSID" type="String">System.String</param>
+/// <param name="Name" type="String">System.String</param>
+/// <param name="Occupation" type="String">System.String</param>
+/// <param name="PhoneNo" type="String">System.String</param>
+/// <param name="UserEmail" type="String">System.String</param>
+/// <param name="DOB" type="String">System.String</param>
+/// <param name="DOA" type="String">System.String</param>
+/// <param name="SF9CustomersSkinConcerns" type="String">System.String</param>
+/// <param name="SkinBestDescriptionId" type="String">System.String</param>
+/// <param name="SkinCareRoutine" type="String">System.String</param>
+/// <param name="SkinBrandsUsing" type="String">System.String</param>
+/// <param name="BestLikeAboutProducts" type="String">System.String</param>
+/// <param name="SF9CustomersInterests" type="String">System.String</param>
+/// <param name="SF9CustomersSuggestedFriends" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'UpdateProfileDetails',false,{CUSID:CUSID,Name:Name,Occupation:Occupation,PhoneNo:PhoneNo,UserEmail:UserEmail,DOB:DOB,DOA:DOA,SF9CustomersSkinConcerns:SF9CustomersSkinConcerns,SkinBestDescriptionId:SkinBestDescriptionId,SkinCareRoutine:SkinCareRoutine,SkinBrandsUsing:SkinBrandsUsing,BestLikeAboutProducts:BestLikeAboutProducts,SF9CustomersInterests:SF9CustomersInterests,SF9CustomersSuggestedFriends:SF9CustomersSuggestedFriends},succeededCallback,failedCallback,userContext); },
+wsGetslideTestinomials:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetslideTestinomials',false,{},succeededCallback,failedCallback,userContext); },
+wsGetMakeovers:function(startIndex,endIndex,succeededCallback, failedCallback, userContext) {
+/// <param name="startIndex" type="String">System.String</param>
+/// <param name="endIndex" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetMakeovers',false,{startIndex:startIndex,endIndex:endIndex},succeededCallback,failedCallback,userContext); },
+wsGetCustomers:function(disid,strshort,CurrentPageIndex,succeededCallback, failedCallback, userContext) {
+/// <param name="disid" type="String">System.String</param>
+/// <param name="strshort" type="String">System.String</param>
+/// <param name="CurrentPageIndex" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetCustomers',false,{disid:disid,strshort:strshort,CurrentPageIndex:CurrentPageIndex},succeededCallback,failedCallback,userContext); },
+wsGetSF9CustomerDetails:function(cusid,succeededCallback, failedCallback, userContext) {
+/// <param name="cusid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetSF9CustomerDetails',false,{cusid:cusid},succeededCallback,failedCallback,userContext); },
+wsGetAllCustomers:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'wsGetAllCustomers',false,{},succeededCallback,failedCallback,userContext); },
+EventsData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'EventsData',false,{},succeededCallback,failedCallback,userContext); },
+getEventGallery:function(AlbumId,succeededCallback, failedCallback, userContext) {
+/// <param name="AlbumId" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'getEventGallery',false,{AlbumId:AlbumId},succeededCallback,failedCallback,userContext); }}
+wsUtil.registerClass('wsUtil',Sys.Net.WebServiceProxy);
+wsUtil._staticInstance = new wsUtil();
+wsUtil.set_path = function(value) {
+wsUtil._staticInstance.set_path(value); }
+wsUtil.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return wsUtil._staticInstance.get_path();}
+wsUtil.set_timeout = function(value) {
+wsUtil._staticInstance.set_timeout(value); }
+wsUtil.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return wsUtil._staticInstance.get_timeout(); }
+wsUtil.set_defaultUserContext = function(value) { 
+wsUtil._staticInstance.set_defaultUserContext(value); }
+wsUtil.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return wsUtil._staticInstance.get_defaultUserContext(); }
+wsUtil.set_defaultSucceededCallback = function(value) { 
+ wsUtil._staticInstance.set_defaultSucceededCallback(value); }
+wsUtil.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return wsUtil._staticInstance.get_defaultSucceededCallback(); }
+wsUtil.set_defaultFailedCallback = function(value) { 
+wsUtil._staticInstance.set_defaultFailedCallback(value); }
+wsUtil.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return wsUtil._staticInstance.get_defaultFailedCallback(); }
+wsUtil.set_enableJsonp = function(value) { wsUtil._staticInstance.set_enableJsonp(value); }
+wsUtil.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return wsUtil._staticInstance.get_enableJsonp(); }
+wsUtil.set_jsonpCallbackParameter = function(value) { wsUtil._staticInstance.set_jsonpCallbackParameter(value); }
+wsUtil.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return wsUtil._staticInstance.get_jsonpCallbackParameter(); }
+wsUtil.set_path("/ws/wsUtil.asmx");
+wsUtil.HelloWorld= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.HelloWorld(onSuccess,onFailed,userContext); }
+wsUtil.SaveContactData= function(Name,Address,CountryName,PinCode,CityName,UserEmail,strQuery,strdisId,strIsDistributor,onSuccess,onFailed,userContext) {
+/// <param name="Name" type="String">System.String</param>
+/// <param name="Address" type="String">System.String</param>
+/// <param name="CountryName" type="String">System.String</param>
+/// <param name="PinCode" type="String">System.String</param>
+/// <param name="CityName" type="String">System.String</param>
+/// <param name="UserEmail" type="String">System.String</param>
+/// <param name="strQuery" type="String">System.String</param>
+/// <param name="strdisId" type="String">System.String</param>
+/// <param name="strIsDistributor" type="Boolean">System.Boolean</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.SaveContactData(Name,Address,CountryName,PinCode,CityName,UserEmail,strQuery,strdisId,strIsDistributor,onSuccess,onFailed,userContext); }
+wsUtil.SaveCustomerContactUs= function(Name,UserEmail,PhoneNo,isdistributor,distributorid,onSuccess,onFailed,userContext) {
+/// <param name="Name" type="String">System.String</param>
+/// <param name="UserEmail" type="String">System.String</param>
+/// <param name="PhoneNo" type="String">System.String</param>
+/// <param name="isdistributor" type="Boolean">System.Boolean</param>
+/// <param name="distributorid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.SaveCustomerContactUs(Name,UserEmail,PhoneNo,isdistributor,distributorid,onSuccess,onFailed,userContext); }
+wsUtil.wsGetOrders= function(DistributorId,disid,CurrentPageIndex,onSuccess,onFailed,userContext) {
+/// <param name="DistributorId" type="String">System.String</param>
+/// <param name="disid" type="String">System.String</param>
+/// <param name="CurrentPageIndex" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetOrders(DistributorId,disid,CurrentPageIndex,onSuccess,onFailed,userContext); }
+wsUtil.wsGetOrdersSummary= function(orderid,onSuccess,onFailed,userContext) {
+/// <param name="orderid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetOrdersSummary(orderid,onSuccess,onFailed,userContext); }
+wsUtil.CreateNewSF9Order= function(Customer_Id,ProductIds_Qtys,Comments,onSuccess,onFailed,userContext) {
+/// <param name="Customer_Id" type="Number">System.Int32</param>
+/// <param name="ProductIds_Qtys" type="String">System.String</param>
+/// <param name="Comments" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.CreateNewSF9Order(Customer_Id,ProductIds_Qtys,Comments,onSuccess,onFailed,userContext); }
+wsUtil.saveAnalysisResult= function(Customer_Id,ProductIds_Qtys,onSuccess,onFailed,userContext) {
+/// <param name="Customer_Id" type="Number">System.Int32</param>
+/// <param name="ProductIds_Qtys" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.saveAnalysisResult(Customer_Id,ProductIds_Qtys,onSuccess,onFailed,userContext); }
+wsUtil.UpdateProfileDetails= function(CUSID,Name,Occupation,PhoneNo,UserEmail,DOB,DOA,SF9CustomersSkinConcerns,SkinBestDescriptionId,SkinCareRoutine,SkinBrandsUsing,BestLikeAboutProducts,SF9CustomersInterests,SF9CustomersSuggestedFriends,onSuccess,onFailed,userContext) {
+/// <param name="CUSID" type="String">System.String</param>
+/// <param name="Name" type="String">System.String</param>
+/// <param name="Occupation" type="String">System.String</param>
+/// <param name="PhoneNo" type="String">System.String</param>
+/// <param name="UserEmail" type="String">System.String</param>
+/// <param name="DOB" type="String">System.String</param>
+/// <param name="DOA" type="String">System.String</param>
+/// <param name="SF9CustomersSkinConcerns" type="String">System.String</param>
+/// <param name="SkinBestDescriptionId" type="String">System.String</param>
+/// <param name="SkinCareRoutine" type="String">System.String</param>
+/// <param name="SkinBrandsUsing" type="String">System.String</param>
+/// <param name="BestLikeAboutProducts" type="String">System.String</param>
+/// <param name="SF9CustomersInterests" type="String">System.String</param>
+/// <param name="SF9CustomersSuggestedFriends" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.UpdateProfileDetails(CUSID,Name,Occupation,PhoneNo,UserEmail,DOB,DOA,SF9CustomersSkinConcerns,SkinBestDescriptionId,SkinCareRoutine,SkinBrandsUsing,BestLikeAboutProducts,SF9CustomersInterests,SF9CustomersSuggestedFriends,onSuccess,onFailed,userContext); }
+wsUtil.wsGetslideTestinomials= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetslideTestinomials(onSuccess,onFailed,userContext); }
+wsUtil.wsGetMakeovers= function(startIndex,endIndex,onSuccess,onFailed,userContext) {
+/// <param name="startIndex" type="String">System.String</param>
+/// <param name="endIndex" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetMakeovers(startIndex,endIndex,onSuccess,onFailed,userContext); }
+wsUtil.wsGetCustomers= function(disid,strshort,CurrentPageIndex,onSuccess,onFailed,userContext) {
+/// <param name="disid" type="String">System.String</param>
+/// <param name="strshort" type="String">System.String</param>
+/// <param name="CurrentPageIndex" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetCustomers(disid,strshort,CurrentPageIndex,onSuccess,onFailed,userContext); }
+wsUtil.wsGetSF9CustomerDetails= function(cusid,onSuccess,onFailed,userContext) {
+/// <param name="cusid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetSF9CustomerDetails(cusid,onSuccess,onFailed,userContext); }
+wsUtil.wsGetAllCustomers= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.wsGetAllCustomers(onSuccess,onFailed,userContext); }
+wsUtil.EventsData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.EventsData(onSuccess,onFailed,userContext); }
+wsUtil.getEventGallery= function(AlbumId,onSuccess,onFailed,userContext) {
+/// <param name="AlbumId" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+wsUtil._staticInstance.getEventGallery(AlbumId,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+if (typeof(OrdersData) === 'undefined') {
+var OrdersData=gtc("OrdersData");
+OrdersData.registerClass('OrdersData');
+}
+if (typeof(OrdersDatasummary) === 'undefined') {
+var OrdersDatasummary=gtc("OrdersDatasummary");
+OrdersDatasummary.registerClass('OrdersDatasummary');
+}
+if (typeof(MakeoversTestinomials) === 'undefined') {
+var MakeoversTestinomials=gtc("MakeoversTestinomials");
+MakeoversTestinomials.registerClass('MakeoversTestinomials');
+}
+if (typeof(Makeovers) === 'undefined') {
+var Makeovers=gtc("Makeovers");
+Makeovers.registerClass('Makeovers');
+}
+if (typeof(CustomersData) === 'undefined') {
+var CustomersData=gtc("CustomersData");
+CustomersData.registerClass('CustomersData');
+}
+if (typeof(CustomersDetails) === 'undefined') {
+var CustomersDetails=gtc("CustomersDetails");
+CustomersDetails.registerClass('CustomersDetails');
+}
+if (typeof(Sf9Event) === 'undefined') {
+var Sf9Event=gtc("Sf9Event");
+Sf9Event.registerClass('Sf9Event');
+}
+if (typeof(sf9EventsGallery) === 'undefined') {
+var sf9EventsGallery=gtc("sf9EventsGallery");
+sf9EventsGallery.registerClass('sf9EventsGallery');
+}

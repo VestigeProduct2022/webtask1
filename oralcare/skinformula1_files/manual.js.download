@@ -1,0 +1,158 @@
+// JavaScript Document
+
+
+
+function switch_tabs(obj) {
+    $('.tab-content').hide();
+    $('.simpleTabs li a').removeClass("onSelect");
+    var id = obj.attr("rel");
+
+    $('#' + id).show();
+    obj.addClass("onSelect");
+}
+
+$(function() {
+
+    $('.simpleTabs li a').click(function() {
+        switch_tabs($(this));
+    });
+
+    switch_tabs($('.defaulttab'));
+
+
+});
+$(document).ready(function() {
+$('.bec_leave_details a.bec_leave_btn').click(function() {
+    
+        $(".popupbox").css({ 'display': 'block' });
+        $('body').append('<div id="fade"></div>');
+        $('#fade').css({ 'filter': 'alpha(opacity=80)' }).fadeIn();
+        var popuptopmargin = ($('.popupbox').height()) / 2;
+        var popupleftmargin = ($('.popupbox').width()) / 2;
+        // Then using .css function style our popup box for center allignment
+        $('.popupbox').css({
+            'margin-top': -popuptopmargin,
+            'margin-left': -popupleftmargin
+        });
+        $("body").css({ 'overflow': 'hidden' });
+    });
+
+    $('a.recipeanchor').click(function() {
+        $(".popupbox3").css({ 'display': 'block' });
+        $('body').append('<div id="fade"></div>');
+        $('#fade').css({ 'filter': 'alpha(opacity=80)' }).fadeIn();
+        var popuptopmargin = ($('.popupbox3').height()) / 2;
+        var popupleftmargin = ($('.popupbox3').width()) / 2;
+        // Then using .css function style our popup box for center allignment
+        $('.popupbox3').css({
+            'margin-top': -popuptopmargin,
+            'margin-left': -popupleftmargin
+        });
+    });
+    $('a.recipeanchor2').click(function() {
+        $(".popupbox4").css({ 'display': 'block' });
+        $('body').append('<div id="fade"></div>');
+        $('#fade').css({ 'filter': 'alpha(opacity=80)' }).fadeIn();
+        var popuptopmargin = ($('.popupbox4').height()) / 2;
+        var popupleftmargin = ($('.popupbox4').width()) / 2;
+        // Then using .css function style our popup box for center allignment
+        $('.popupbox4').css({
+            'margin-top': -popuptopmargin,
+            'margin-left': -popupleftmargin
+        });
+    });
+
+    $('a.styleanchor').click(function() {
+        $(".popupbox5").css({ 'display': 'block' });
+        $('body').append('<div id="fade"></div>');
+        $('#fade').css({ 'filter': 'alpha(opacity=80)' }).fadeIn();
+        var popuptopmargin = ($('.popupbox5').height()) / 2;
+        var popupleftmargin = ($('.popupbox5').width()) / 2;
+        // Then using .css function style our popup box for center allignment
+        $('.popupbox5').css({
+            'margin-top': -popuptopmargin,
+            'margin-left': -popupleftmargin
+        });
+    });
+
+    $('.close').click(function() {
+        $(".popupbox, .popupbox2,.popupbox3,.popupbox4, .popupbox5").css({ 'display': 'none' });
+        $("#fade").fadeOut();
+    });
+
+
+
+    if ((navigator.userAgent.match(/Macintosh/i)) || (navigator.userAgent.match(/MSIE/i)) || ((navigator.userAgent.match(/Windows/i)))) {
+        $('#main-slider').liquidSlider({
+            autoHeight: false,
+            slideEaseFunction: 'animate.css',
+            slideEaseDuration: 500,
+            heightEaseDuration: 1000,
+            animateOut: "fadeOut",
+            animateIn: "fadeIn",
+            callback: function() {
+                var self = this;
+                $('.main-slider-panel').each(function() {
+                    $(this).removeClass('animated ' + self.options.animateIn);
+                });
+            }
+        });
+    }
+    var isiPad = navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i) != null;
+
+    //if is ipad
+    if (isiPad == true) {
+        $('#main-slider').liquidSlider();
+    }
+
+
+
+});
+
+
+$(".ques1 .next").click(function() {
+    $(".ques2").show();
+    $(".ques1, .ques3, .ques4, .ques5, .ques6, .ques7, .our_recommendation").hide();
+});
+$(".ques2 .next").click(function() {
+    $(".ques3").show();
+    $(".ques1, .ques2, .ques4, .ques5, .ques6, .ques7, .our_recommendation").hide();
+});
+$(".ques3 .next").click(function() {
+    $(".ques4").show();
+    $(".ques1, .ques3, .ques2, .ques5, .ques6, .ques7, .our_recommendation").hide();
+});
+$(".ques4 .next").click(function() {
+    $(".ques5").show();
+    $(".ques1, .ques3, .ques4, .ques2, .ques6, .ques7, .our_recommendation").hide();
+});
+$(".ques5 .next").click(function() {
+    $(".ques6").show();
+    $(".ques1, .ques3, .ques4, .ques5, .ques2, .ques7, .our_recommendation").hide();
+});
+$(".ques6 .next").click(function() {
+    $(".ques7").show();
+    $(".ques1, .ques3, .ques4, .ques5, .ques2, .ques6, .our_recommendation").hide();
+});
+$(".ques7 .finish").click(function() {
+    $(".our_recommendation").show();
+    $(".ques1, .ques3, .ques4, .ques5, .ques2, .ques6, .ques7").hide();
+});
+
+
+function ifsearch() {
+    var strurl = document.URL;
+    if (strurl.indexOf("results=") > -1) {
+        $("#btnback").show();
+
+    }
+    else {
+        $("#btnback").hide();
+
+    }
+
+}
+
+
+
+   

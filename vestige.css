@@ -1,0 +1,303 @@
+
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.vesnav{
+    display:flex;
+    position: fixed;
+    width: 100%;
+    align-items:center;
+    height: 50PX;
+    background-color: black;
+    /* background-color: black; */
+}
+.vesul{
+    width:70%;
+    display: flex;
+    align-items: center;
+   
+    
+}
+.rightnav{
+    width:30%;
+    text-align: right;
+   
+}
+.rightnav a{
+     color:
+     white;
+     text-decoration:
+     none;
+    padding:5px;
+     margin-right: 10px;
+     font-size: large;
+}
+.rightnav a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding:5px 15px;
+}
+.vesli {
+    text-decoration: none;
+    display: block;
+
+}
+.vesli a{
+    color:white;
+    padding:15px;
+    font-size: large;
+    text-decoration:none;
+}
+.vesli a:hover{
+     background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding:5px 15px;
+}
+.veslogo {
+    display: flex;
+    padding:5px;
+    margin-left:5px;
+}
+.veslogo img{
+    border-radius:100%;
+}
+.background{
+   
+    background: rgba(0,0,0,0.3)url("/photos/vestigeimage2.jfif") no-repeat center center/cover; 
+    max-width: 100%;
+    background-size:cover;
+    /* background-size:auto; */
+    background-blend-mode: darken;
+
+    /* content:""; */
+    /* position: relative;
+    background:rgba(0,0,0,0.3) url('/photos/vestigeimage2.jfif') no-repeat center center/cover;
+    height: auto;
+    /* top:0px; */
+    /* left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;  */
+}
+.section1{
+    height: 100vh;
+    /* max-width: 100%; */
+    text-align: center;
+    margin: 0px;
+}
+.productlink1{
+    padding-right: 130PX;
+}
+.productlink{
+    padding-right: 181PX;
+}
+.productlink2{
+    padding-right: 114PX;
+}
+
+.head1{
+    text-align: center;
+    padding: 10px;
+    background-color: darkseagreen;
+    
+}
+.contain1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0px auto;
+}
+.subcontain1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 23px;
+    margin: 10px 10px;
+    /* border: 2px solid red; */
+    border-radius: 18px;
+    flex-direction: column;
+   
+}
+.subcontain2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+padding: 10px 23px;
+flex-direction: column;
+
+    
+/* border: 2px solid red; */
+    
+margin: 10px 10px;
+    
+border-radius: 18px;
+}
+.vishal{
+   display: flex;
+   flex-direction: row;
+   
+    /* max-width: 221px; */
+}
+.healthimage{
+    padding: 5px;
+    border-radius: 25px;
+}
+.detail{
+    padding: 5px;
+}
+.maincontain{
+    max-width: 70%;
+    margin: 0px auto;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.aboutcontain1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutcontain2{
+    
+}
+.span1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 20px;
+}
+.section3{
+    height: 100%;
+    background-color: aliceblue;
+}
+.about2{
+    text-align: center;
+    padding: 12px ;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.head3{
+    text-align: center;
+}
+#about{
+    padding: 0px 5px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+}
+.logo1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo1{
+    padding: 5px 10px;
+}
+.section4{
+  
+}
+.contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    
+    /* margin-bottom: 5px; */
+    /* padding: 5px; */
+/* position: relative; */}
+.h4{
+    text-align: center;
+    padding: 22px;
+    /* background-color:darkseagreen; */
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+}
+.contain input,
+.contain textarea{
+    padding: 5px;
+    width: 325px;
+border-radius: 9px;
+text-decoration: none;
+border: 1px solid rgb(247, 242, 242);}
+ 
+.btn1{
+    padding: 2px 4px;
+    margin: 5px 0px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.btn1:hover{
+ background-color: hwb(33 52% 41%);
+ color: white;
+  border-radius: 6px;
+}
+lable{
+ color: black;
+ font-weight: bold;
+padding:2px
+}
+.section5{
+    background-color: rgb(255, 240, 240);
+    height: 100%;
+}
+.productlink{
+    padding-left: 12px;
+    display: block;
+    text-decoration: none;
+}
+.aboutcontain1 img{
+    border-radius: 20px;
+    padding: 10px;
+}
+.footer{
+    background-color: black;
+    color: white;
+    height: 40px;
+}
+footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+/* .vishal2{
+    flex-wrap: wrap;
+    display: flex;
+} */
+/* .vishal{
+ display: flex;   
+} */
+
+.section2{
+
+}
+@media only screen and (max-width: 700px){
+    .contain1{
+        display: flex;
+        flex-direction: column;
+    }
+}
